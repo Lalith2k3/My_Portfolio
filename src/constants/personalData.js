@@ -9,7 +9,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/lalithvanam-dev/",
   github: "https://github.com/Lalith2k3",
   portfolio: "www.faangpath.com",
-  profileImage: "/src/public/My_Picture.png",
+  profileImage: "/My_Picture.png",
   description: "Software Engineer with 4+ years of experience in midstream pipeline operations, with hands-on expertise in .NET Core MVC and AI RAG-based applications. Seeking full-time AI/ML roles."
 }
 
