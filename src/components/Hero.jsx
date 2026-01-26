@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa'
 import { personalInfo } from '../constants/personalData'
 import './Hero.css'
 
@@ -18,7 +18,9 @@ const Hero = () => {
             </p>
             <div className="hero-buttons">
               <a href="#contact" className="btn btn-primary">Get In Touch</a>
-              <a href="#projects" className="btn btn-secondary">View Work</a>
+              <a href={personalInfo.resumeUrl} download className="btn btn-secondary">
+                <FaDownload /> Download Resume
+              </a>
             </div>
             <div className="social-links">
               <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">

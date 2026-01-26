@@ -8,8 +8,9 @@ export const personalInfo = {
   email: "lalithvanam04@gmail.com",
   linkedin: "https://www.linkedin.com/in/lalithvanam-dev/",
   github: "https://github.com/Lalith2k3",
-  portfolio: "www.faangpath.com",
+  portfolio: "https://lalithkoushik.netlify.app/",
   profileImage: "/My_Picture.png",
+  resumeUrl: "/Lalith_Koushik_Vanam_Resume.pdf",
   description: "Software Engineer with 4+ years of experience in midstream pipeline operations, with hands-on expertise in .NET Core MVC and AI RAG-based applications. Seeking full-time AI/ML roles."
 }
 
