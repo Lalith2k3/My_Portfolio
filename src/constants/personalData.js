@@ -11,7 +11,7 @@ export const personalInfo = {
   portfolio: "https://lalithkoushik.netlify.app/",
   profileImage: "/My_Picture.png",
   resumeUrl: "/Lalith_Koushik_Vanam_Resume.pdf",
-  description: "Software Engineer with 4+ years of experience in midstream pipeline operations, with hands-on expertise in .NET Core MVC and AI RAG-based applications. Seeking full-time AI/ML roles."
+  description: "Software Engineer with 4+ years of expeprrience in midstream pipeline operations, with hands-on expertise in .NET Core MVC and AI RAG-based applications. Seeking full-time AI/ML roles."
 }
 
 // Education
@@ -34,7 +34,7 @@ export const education = [
 export const experience = [
   {
     title: "Full Stack and AI Software Engineer",
-    company: "Midstream AI",
+    company: "MidstreamAI",
     location: "Houston, TX",
     period: "June 2024 - May 2026",
     description: [
