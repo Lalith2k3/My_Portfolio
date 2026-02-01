@@ -18,7 +18,7 @@ export const personalInfo = {
 export const education = [
   {
     degree: "Master's in Computer Science",
-    institution: "University of Houston",
+    institution: "University of Houston [May 2026]",
     period: "Expected May 2026",
     location: "Houston, TX"
   },

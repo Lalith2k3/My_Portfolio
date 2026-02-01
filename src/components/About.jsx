@@ -30,7 +30,7 @@ const About = () => {
                 <div key={index} className="education-item">
                   <h4>{edu.degree}</h4>
                   <p className="institution">{edu.institution}</p>
-                  <p className="period">{edu.period}</p>
+
                 </div>
               ))}
             </div>
