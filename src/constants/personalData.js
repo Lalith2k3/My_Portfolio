@@ -68,7 +68,7 @@ export const projects = [
   {
     title: "Pipeline Leak Detection Insights Application",
     description: "Developed a standalone ASP.NET Core MVC application for pipeline leak detection insights using interactive dashboards (tables and graphs) via the Plotly API. Implemented the repository pattern for data access, server-side controllers for aggregation logic, and client-side JavaScript for dynamic interactive analytics.",
-    tech: ["ASP.NET Core MVC", "Plotly API", "JavaScript", "Repository Pattern"],
+    tech: ["ASP.NET Core MVC", "Plotly API", "JavaScript", "Repository Pattern", "SSMS"],
     github: "#",
     demo: "#"
   }
@@ -81,6 +81,8 @@ export const skills = {
     "RAG Systems",
     "Pattern Recognition",
     "React.js",
+    ".NET Core Web API",
+    "FastAPI",
     "CI/CD Pipeline"
   ],
   soft: [
@@ -93,6 +95,6 @@ export const skills = {
 // Statistics
 export const stats = [
   { value: "4+", label: "Years Experience" },
-  { value: "8+", label: "Projects Completed" },
+  { value: "9+", label: "Projects Completed" },
   { value: "2", label: "Companies Worked" }
 ]
