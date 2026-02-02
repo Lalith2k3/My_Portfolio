@@ -4,10 +4,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(15, 23, 42, 0.95);
+  background-color: rgba(15, 23, 42, 0.98);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header.scrolled {
@@ -29,6 +30,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  white-space: nowrap;
 }
 
 .mobile-menu-btn {
@@ -86,25 +88,42 @@
     display: flex;
   }
 
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav {
+    padding: 0.75rem 0;
+  }
+
   .nav-list {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: var(--bg-secondary);
-    padding: 2rem;
-    gap: 1.5rem;
+    background-color: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    gap: 1rem;
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
   }
 
   .nav-list.open {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+
+  .nav-list a {
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
   }
 }
