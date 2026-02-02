@@ -2,28 +2,28 @@
 export const personalInfo = {
   name: "Lalith Koushik Vanam",
   title: "Software Engineer",
-  subtitle: "AI/ML & Full Stack Developer",
+  subtitle: "Full Stack & AI Software Engineer",
   location: "Houston, TX",
   phone: "+1 (281) 202-4868",
   email: "lalithvanam04@gmail.com",
   linkedin: "https://www.linkedin.com/in/lalithvanam-dev/",
   github: "https://github.com/Lalith2k3",
-  portfolio: "https://lalithkoushik.netlify.app/",
+  portfolio: "https://www.lalithkoushik.com/",
   profileImage: "/My_Picture.png",
   resumeUrl: "/Lalith_Koushik_Vanam_Resume.pdf",
-  description: "Software Engineer with 4+ years of expeprrience in midstream pipeline operations, with hands-on expertise in .NET Core MVC and AI RAG-based applications. Seeking full-time AI/ML roles."
+  description: "Software Engineer with 4+ years of professional experience designing and building scalable, production-grade web and AI-enabled systems. Specialized in ASP.NET Core, RESTful APIs, React/TypeScript, and Retrieval-Augmented Generation (RAG) architectures. Proven experience delivering industrial analytics platforms, AI-powered data exploration tools, and reusable enterprise components with a strong focus on system design, maintainability, and real-world operational impact."
 }
 
 // Education
 export const education = [
   {
-    degree: "Master's in Computer Science",
-    institution: "University of Houston [May 2026]",
-    period: "Expected May 2026",
+    degree: "Master of Science in Computer Science",
+    institution: "University of Houston",
+    period: "May 2026",
     location: "Houston, TX"
   },
   {
-    degree: "Bachelor's in Computer Science",
+    degree: "Bachelor of Technology in Computer Science",
     institution: "Keshav Memorial Institute of Technology",
     period: "2020 - 2024",
     location: "India"
@@ -33,14 +33,16 @@ export const education = [
 // Experience
 export const experience = [
   {
-    title: "Full Stack and AI Software Engineer",
+    title: "Full Stack & AI Software Engineer",
     company: "MidstreamAI",
     location: "Houston, TX",
     period: "June 2024 - May 2026",
     description: [
-      "Developed a pipeline leak detection data visualization application using ASP.NET Core MVC and Plotly API, enabling stakeholders to analyze operational insights through interactive dashboards.",
-      "Designed and implemented reusable UI components, improving development efficiency and ensuring consistency across multiple enterprise applications.",
-      "Implemented an AI chatbot using Ollama LLM within a standalone application, enabling stakeholders to query pipeline operations and structural data."
+      "Designed and owned a pipeline leak detection analytics platform using ASP.NET Core MVC and Plotly.js, enabling engineers and stakeholders to analyze operational trends through interactive dashboards.",
+      "Architected reusable frontend and backend components adopted across multiple enterprise applications, reducing development effort and improving UI consistency.",
+      "Built and integrated an AI-powered conversational analytics assistant using Ollama LLM, enabling natural-language queries over pipeline operations and structural metadata.",
+      "Implemented server-side aggregation logic, optimized data access layers, and structured APIs for scalable analytics workloads.",
+      "Collaborated with domain experts to translate operational requirements into production-ready software features."
     ]
   },
   {
@@ -49,9 +51,10 @@ export const experience = [
     location: "Hyderabad, India",
     period: "August 2022 - May 2024",
     description: [
-      "Gained hands-on exposure to seep detection and leak analysis systems used in real-world oil and gas pipeline monitoring applications.",
-      "Analyzed the design and workflow of Seep Plot applications, including alarm analysis and trend-based visualizations using Excel macros and dataPARC.",
-      "Studied the end-to-end lifecycle of industrial software applications, including configuration generation, real-time data plotting, shut-in evaluations, alarm validation, and delivery in a production environment."
+      "Worked on industrial seep detection and leak analysis systems used in real-world oil and gas pipeline monitoring environments.",
+      "Analyzed and enhanced seep plot and alarm analysis workflows, supporting trend-based visualizations using Excel macros and dataPARC systems.",
+      "Gained exposure to the end-to-end lifecycle of industrial software, including configuration generation, real-time data ingestion, visualization, alarm validation, and production delivery.",
+      "Developed a strong understanding of operational reliability, data accuracy, and system validation requirements in safety-critical applications."
     ]
   }
 ]
@@ -60,41 +63,40 @@ export const experience = [
 export const projects = [
   {
     title: "Agentic-AI Analytics Platform",
-    description: "Designed and built a microservices-based RAG platform for industrial data analysis using FastAPI, PostgreSQL (TimescaleDB), and React/TypeScript. Implemented SQL-RAG and NetworkX-RAG agents with Ollama LLM integration for natural-language-to-SQL queries and graph analytics, with real-time streaming APIs and automated Plotly.js visualizations.",
-    tech: ["FastAPI", "PostgreSQL", "TimescaleDB", "React", "TypeScript", "Ollama LLM", "NetworkX", "Plotly.js"],
+    description: "Designed and developed a microservices-based AI analytics platform for industrial data exploration using FastAPI, PostgreSQL (TimescaleDB), and React/TypeScript. Implemented SQL-RAG and NetworkX-based Graph-RAG agents integrated with Ollama LLM to enable natural-language-to-SQL queries and graph analytics. Built real-time streaming APIs and automated Plotly.js visualizations, demonstrating a production-ready approach to AI-driven data analysis.",
+    tech: ["FastAPI", "PostgreSQL", "TimescaleDB", "React", "TypeScript", "Ollama LLM", "SQL-RAG", "Graph-RAG", "NetworkX", "Plotly.js"],
     github: "#",
     demo: "#"
   },
   {
     title: "Pipeline Leak Detection Insights Application",
-    description: "Developed a standalone ASP.NET Core MVC application for pipeline leak detection insights using interactive dashboards (tables and graphs) via the Plotly API. Implemented the repository pattern for data access, server-side controllers for aggregation logic, and client-side JavaScript for dynamic interactive analytics.",
-    tech: ["ASP.NET Core MVC", "Plotly API", "JavaScript", "Repository Pattern", "SSMS"],
+    description: "Developed a standalone ASP.NET Core MVC application providing operational insights for pipeline leak detection. Implemented interactive dashboards (tables and charts) using Plotly.js, repository-based data access, server-side aggregation controllers, and dynamic client-side analytics. Designed the application with scalability and maintainability in mind for real-world industrial usage.",
+    tech: ["ASP.NET Core MVC", "Plotly.js", "Repository Pattern", "JavaScript", "SSMS"],
     github: "#",
     demo: "#"
   }
 ]
 
-// Skills - Exactly as mentioned in resume
+// Skills - Core Tech Stack from resume
 export const skills = {
   technical: [
-    "ASP .NET CORE MVC",
-    "RAG Systems",
-    "Pattern Recognition",
-    "React.js",
-    ".NET Core Web API",
+    "ASP.NET Core MVC",
+    "Web API",
     "FastAPI",
-    "CI/CD Pipeline"
+    "RAG Pipelines",
+    "React.js",
+    "TypeScript",
+    "PostgreSQL",
+    "MSSQL",
+    "CI/CD Pipelines",
+    "Git",
   ],
-  soft: [
-    "Problem-Solving",
-    "Time Management",
-    "Communication Skills"
-  ]
+  soft: ["Problem-Solving", "Time Management", "Communication Skills"]
 }
 
 // Statistics
 export const stats = [
   { value: "4+", label: "Years Experience" },
-  { value: "9+", label: "Projects Completed" },
+  { value: "10+", label: "Projects Completed" },
   { value: "2", label: "Companies Worked" }
 ]
