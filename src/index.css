@@ -5,36 +5,44 @@
 }
 
 :root {
-  /* Dark Theme Colors */
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --accent-color: #10b981;
-  
-  /* Dark Background Colors */
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --card-bg: #1e293b;
-  
-  /* Text Colors */
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  
-  /* Border & Divider */
-  --border-color: #334155;
-  
-  /* Tag Background */
-  --tag-bg: #334155;
-  
+  /* Warm Orange / Amber Theme */
+  --primary-color: #e07b0f; /* Warm amber-orange */
+  --secondary-color: #f5b120; /* Golden yellow */
+  --accent-color: #c96d09; /* Deep amber */
+
+  /* Light Backgrounds */
+  --bg-primary: #fafaf8; /* Warm white */
+  --bg-secondary: #f1ece4; /* Warm cream */
+  --card-bg: #ffffff; /* Pure white cards */
+
+  /* Text */
+  --text-primary: #1c1a14; /* Warm near-black */
+  --text-secondary: #3e3a30; /* Warm brown-gray */
+  --text-muted: #7a7260; /* Muted warm gray */
+
+  /* Borders & Tags */
+  --border-color: #e4ddd2;
+  --tag-bg: #ede7de;
+
   /* Shadows */
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
-  --glow: 0 0 20px rgba(99, 102, 241, 0.3);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --glow: 0 0 28px rgba(224, 123, 15, 0.2);
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,9 +72,9 @@ img {
   height: auto;
 }
 
-/* Scrollbar Styling */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -74,10 +82,10 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 5px;
+  background: var(--border-color);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }

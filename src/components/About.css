@@ -10,20 +10,22 @@
 }
 
 .about-text p {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 .education-section {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 2px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .education-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
@@ -33,55 +35,81 @@
 }
 
 .education-item h4 {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
 }
 
 .education-item .institution {
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .education-item .period {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 .about-stats {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .stat-card {
   background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  border-radius: 14px;
   text-align: center;
   border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary-color);
-  box-shadow: var(--glow);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(224, 123, 15, 0.15);
+}
+
+.stat-card:hover::before {
+  opacity: 1;
 }
 
 .stat-card h3 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 800;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  letter-spacing: -0.04em;
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .stat-card p {
   color: var(--text-secondary);
+  font-size: 0.9rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 768px) {
