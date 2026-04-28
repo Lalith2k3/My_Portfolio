@@ -10,8 +10,8 @@ export const personalInfo = {
   github: "https://github.com/Lalith2k3",
   portfolio: "https://www.lalithkoushik.com/",
   profileImage: "/My_Picture.png",
-  resumeUrl: "/Lalith_Koushik_Vanam_Resume.pdf",
-  description: "Software Engineer with 4+ years of professional experience designing and building scalable, production-grade web and AI-enabled systems. Specialized in ASP.NET Core, RESTful APIs, React/TypeScript, and Retrieval-Augmented Generation (RAG) architectures. Proven experience delivering industrial analytics platforms, AI-powered data exploration tools, and reusable enterprise components with a strong focus on system design, maintainability, and real-world operational impact."
+  resumeUrl: "/LalithKoushikVanam.pdf",
+  description: "Software Engineer with 4+ years of experience building production-grade web and agentic AI systems. Specialized in multi-agent orchestration with LangGraph and LangChain, full-stack development with ASP.NET Core and React, and RAG architectures over relational and graph databases. Track record of shipping maintainable, well-architected systems in industrial and AI-driven environments."
 }
 
 // Education
@@ -38,11 +38,12 @@ export const experience = [
     location: "Houston, TX",
     period: "June 2024 - May 2026",
     description: [
-      "Designed and owned a pipeline leak detection analytics platform using ASP.NET Core MVC and Plotly.js, enabling engineers and stakeholders to analyze operational trends through interactive dashboards.",
-      "Architected reusable frontend and backend components adopted across multiple enterprise applications, reducing development effort and improving UI consistency.",
-      "Built and integrated an AI-powered conversational analytics assistant using Ollama LLM, enabling natural-language queries over pipeline operations and structural metadata.",
-      "Implemented server-side aggregation logic, optimized data access layers, and structured APIs for scalable analytics workloads.",
-      "Collaborated with domain experts to translate operational requirements into production-ready software features."
+      "Designed and owned a production-grade multi-agent AI system using LangGraph and LangChain — Supervisor → Specialist Agents (Topology, Operations) → Summarizer — enabling natural-language queries over industrial infrastructure with full audit logging via a shared Pydantic V2 AgentState as the single source of truth.",
+      "Built a Supervisor agent with a classification stage (6 routing strategies: topology, operations, topology_first, operations_first, parallel, summarizer) followed by a pre-execution planning stage that decomposes queries into dependency-aware agent tasks entirely upfront — no mid-flight replanning required.",
+      "Engineered an ambiguity detection flow where genuinely unclear queries return a structured clarification question with selectable options rendered as UI buttons; specialist agents are bypassed until the operator confirms intent.",
+      "Replaced create_react_agent with a hand-wired 3-node graph (call_llm → execute_tool → handle_response) to gain full control over response normalization, structured error recovery distinguishing terminal vs. recoverable failures, and iteration capping to bound cost.",
+      "Implemented in-memory tool result caching to eliminate redundant HTTP round-trips; Tenacity exponential backoff retry (2s–30s, 3 attempts) for transient LLM errors; deliberate model tiering — Claude Haiku for tool-selection tasks and Sonnet for final response synthesis.",
+      "Designed and delivered a pipeline leak detection analytics platform (ASP.NET Core MVC, Plotly.js) with interactive dashboards and server-side aggregation; built reusable frontend and backend components adopted across multiple enterprise applications."
     ]
   },
   {
@@ -51,10 +52,10 @@ export const experience = [
     location: "Hyderabad, India",
     period: "August 2022 - May 2024",
     description: [
-      "Worked on industrial seep detection and leak analysis systems used in real-world oil and gas pipeline monitoring environments.",
-      "Analyzed and enhanced seep plot and alarm analysis workflows, supporting trend-based visualizations using Excel macros and dataPARC systems.",
-      "Gained exposure to the end-to-end lifecycle of industrial software, including configuration generation, real-time data ingestion, visualization, alarm validation, and production delivery.",
-      "Developed a strong understanding of operational reliability, data accuracy, and system validation requirements in safety-critical applications."
+      "Developed and maintained industrial seep detection and leak analysis systems for real-world oil and gas pipeline monitoring, working across the full software lifecycle from configuration generation to production delivery.",
+      "Redesigned seep plot and alarm analysis workflows, integrating trend-based visualizations via Excel macros and dataPARC systems to improve operational insight for field engineers.",
+      "Collaborated with domain experts to validate alarm logic, ensure data accuracy, and meet reliability standards for safety-critical infrastructure software used in live operational environments.",
+      "Gained end-to-end exposure to enterprise industrial software: real-time data ingestion, sensor-driven visualization, configuration management, and production validation in high-stakes environments."
     ]
   }
 ]
@@ -63,35 +64,52 @@ export const experience = [
 export const projects = [
   {
     title: "Agentic-AI Analytics Platform",
-    description: "Designed and developed a microservices-based AI analytics platform for industrial data exploration using FastAPI, PostgreSQL (TimescaleDB), and React/TypeScript. Implemented SQL-RAG and NetworkX-based Graph-RAG agents integrated with Ollama LLM to enable natural-language-to-SQL queries and graph analytics. Built real-time streaming APIs and automated Plotly.js visualizations, demonstrating a production-ready approach to AI-driven data analysis.",
-    tech: ["FastAPI", "PostgreSQL", "TimescaleDB", "React", "TypeScript", "Ollama LLM", "SQL-RAG", "Graph-RAG", "NetworkX", "Plotly.js"],
+    description: "Built a manual 3-node LangGraph mini-workflow with a dedicated handle_response node between tool execution and the next LLM call, enabling response normalization, recoverable error hints (device not found → fuzzy search → retry with canonical ID), and hard stops on terminal errors. Integrated session-level conversation memory into the Supervisor and Summarizer for coherent multi-turn dialogue. Implemented an Operations Agent querying TimescaleDB via MCP-based tool discovery and a Topology Agent performing graph traversal over a NetworkX-modelled pipeline network.",
+    tech: ["FastAPI", "LangGraph", "LangChain", "Claude", "PostgreSQL", "TimescaleDB", "NetworkX", "React", "TypeScript"],
     github: "#",
     demo: "#"
   },
   {
     title: "Pipeline Leak Detection Insights Application",
-    description: "Developed a standalone ASP.NET Core MVC application providing operational insights for pipeline leak detection. Implemented interactive dashboards (tables and charts) using Plotly.js, repository-based data access, server-side aggregation controllers, and dynamic client-side analytics. Designed the application with scalability and maintainability in mind for real-world industrial usage.",
-    tech: ["ASP.NET Core MVC", "Plotly.js", "Repository Pattern", "JavaScript", "SSMS"],
+    description: "Built a production-ready analytics application for pipeline leak detection: interactive Plotly.js dashboards, repository-pattern data access, server-side aggregation controllers, and dynamic client-side filtering — designed for scalability and long-term maintainability in an industrial environment.",
+    tech: ["ASP.NET Core MVC", "Plotly.js", "PostgreSQL", "Repository Pattern", "JavaScript"],
     github: "#",
     demo: "#"
   }
 ]
 
-// Skills - Core Tech Stack from resume
+// Skills - categorized as per resume
 export const skills = {
-  technical: [
-    "ASP.NET Core MVC",
-    "Web API",
-    "FastAPI",
-    "RAG Pipelines",
-    "React.js",
-    "TypeScript",
-    "PostgreSQL",
-    "MSSQL",
-    "CI/CD Pipelines",
-    "Git",
-  ],
-  soft: ["Problem-Solving", "Time Management", "Communication Skills"]
+  categories: [
+    {
+      name: "Backend & APIs",
+      items: ["ASP.NET Core MVC", "Web API", "FastAPI", "RESTful Services"]
+    },
+    {
+      name: "AI & LLM Systems",
+      items: ["LangGraph", "LangChain", "Multi-Agent Orchestration", "Claude (Haiku/Sonnet)", "RAG Pipelines", "SQL-RAG", "Graph-RAG (NetworkX)", "Ollama", "Conversation Memory"]
+    },
+    {
+      name: "Agent Patterns",
+      items: ["Supervisor-Worker Orchestration", "Pre-Execution Planning", "Human-in-the-Loop", "Tool Result Caching", "Tenacity Retry Policies", "Model Tiering"]
+    },
+    {
+      name: "Frontend",
+      items: ["React.js", "TypeScript", "Plotly.js", "JavaScript", "HTML/CSS"]
+    },
+    {
+      name: "Databases",
+      items: ["PostgreSQL", "TimescaleDB", "MSSQL", "Heidi SQL"]
+    },
+    {
+      name: "Architecture",
+      items: ["Clean Architecture", "Repository Pattern", "Microservices", "API-first Design"]
+    },
+    {
+      name: "DevOps & Tooling",
+      items: ["CI/CD Pipelines", "Git", "Cloudflare", "asyncpg", "httpx"]
+    }
+  ]
 }
 
 // Statistics

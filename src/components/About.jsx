@@ -10,19 +10,25 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm a passionate Software Engineer with 4+ years of experience specializing in 
-              midstream pipeline operations, AI/ML applications, and full-stack development. 
-              Currently pursuing my Master's in Computer Science at the University of Houston.
+              I'm a Software Engineer with 4+ years of experience building production-grade web and
+              agentic AI systems. Currently completing my Master's in Computer Science at the
+              University of Houston.
             </p>
             <p>
-              My expertise lies in building intelligent systems using .NET Core MVC and AI RAG-based 
-              applications. I've developed pipeline leak detection systems, AI chatbots, and 
-              microservices-based analytics platforms that solve real-world industrial challenges.
+              At MidstreamAI, I designed and own a multi-agent AI platform using LangGraph and
+              LangChain — a Supervisor orchestrating Topology and Operations specialist agents with
+              SQL-RAG over TimescaleDB and Graph-RAG over a NetworkX pipeline network. I built
+              custom LangGraph workflows with structured error recovery, in-memory tool result
+              caching, Tenacity retry policies, and deliberate model tiering (Claude Haiku for
+              tool-selection, Sonnet for synthesis). Prior to this, I delivered a pipeline leak
+              detection analytics platform in ASP.NET Core MVC with interactive Plotly.js dashboards
+              adopted across multiple enterprise applications.
             </p>
             <p>
-              With a strong foundation in both AI/ML and full-stack development, I bring innovative 
-              solutions to complex problems. I'm passionate about leveraging cutting-edge technologies 
-              like LLMs, RAG systems, and modern web frameworks to create impactful applications.
+              Before MidstreamAI, I worked at LTIMindtree on industrial seep detection and leak
+              analysis systems for real-world oil and gas pipelines — spanning configuration
+              generation, real-time data ingestion, sensor-driven visualization, and production
+              validation in safety-critical environments.
             </p>
             <div className="education-section">
               <h3>Education</h3>
