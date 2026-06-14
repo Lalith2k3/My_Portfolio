@@ -7,10 +7,14 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { useScrollReveal } from './hooks/useScrollReveal'
 import './App.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  useScrollReveal()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +31,9 @@ function App() {
           }
         }
       }
+
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight
+      setScrollProgress(scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -35,6 +42,7 @@ function App() {
 
   return (
     <div className="app">
+      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
       <Header activeSection={activeSection} />
       <main>
         <Hero />

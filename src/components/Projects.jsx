@@ -7,10 +7,14 @@ const Projects = () => {
   return (
     <section id="projects" className="projects section">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
+        <h2 className="section-title reveal">Projects</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div
+              key={index}
+              className="project-card reveal"
+              style={{ transitionDelay: `${index * 0.1}s` }}
+            >
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>

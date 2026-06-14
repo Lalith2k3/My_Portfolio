@@ -6,10 +6,14 @@ const Experience = () => {
   return (
     <section id="experience" className="experience section">
       <div className="container">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title reveal">Experience</h2>
         <div className="timeline">
           {experience.map((exp, index) => (
-            <div key={index} className="timeline-item">
+            <div
+              key={index}
+              className="timeline-item reveal"
+              style={{ transitionDelay: `${index * 0.1}s` }}
+            >
               <div className="timeline-dot"></div>
               <div className="timeline-content">
                 <h3>{exp.title}</h3>

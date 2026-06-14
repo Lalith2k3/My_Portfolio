@@ -29,12 +29,12 @@ const Contact = () => {
   return (
     <section id="contact" className="contact section">
       <div className="container">
-        <h2 className="section-title">Get In Touch</h2>
+        <h2 className="section-title reveal">Get In Touch</h2>
         <div className="contact-content">
-          <div className="contact-info">
+          <div className="contact-info reveal">
             <h3>Let's work together</h3>
             <p>
-              I'm actively seeking full-time AI/ML roles and always open to discussing 
+              I'm actively seeking full-time AI/ML, Full-Stack, and SCADA Engineer roles and always open to discussing 
               new projects, innovative ideas, or opportunities to collaborate on 
               cutting-edge technology solutions.
             </p>
@@ -53,7 +53,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form reveal" onSubmit={handleSubmit} style={{ transitionDelay: '0.1s' }}>
             <div className="form-group">
               <input
                 type="text"

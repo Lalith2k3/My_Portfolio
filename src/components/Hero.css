@@ -28,6 +28,57 @@
   z-index: 1;
 }
 
+/* Staggered entrance for the hero on initial load */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-image-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-text > * {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-text .hero-title { animation-delay: 0.1s; }
+.hero-text .hero-subtitle { animation-delay: 0.25s; }
+.hero-text .hero-description { animation-delay: 0.4s; }
+.hero-text .hero-buttons { animation-delay: 0.55s; }
+.hero-text .social-links { animation-delay: 0.7s; }
+
+.hero-image {
+  opacity: 0;
+  animation: hero-image-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text > *,
+  .hero-image {
+    opacity: 1;
+    animation: none;
+  }
+
+  .gradient-text {
+    animation: none;
+  }
+}
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -38,10 +89,22 @@
 }
 
 .gradient-text {
-  background: linear-gradient(120deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(
+    120deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 50%,
+    var(--accent-color) 100%
+  );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50%      { background-position: 100% center; }
 }
 
 .hero-subtitle {
